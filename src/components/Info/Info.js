@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import cl from './Info.module.scss';
 import Loader from '../Loader/Loader';
 
-console.log(currency.error);
+console.log('error', currency.errorMessage);
 
 const Info = () => {
   useEffect(() => {
@@ -20,7 +20,9 @@ const Info = () => {
           <Loader />
         </div>
       )}
-      {/* {currency.error && <h1 className={cl.error}> You have an error ${error} </h1>} */}
+      {currency.errorMessage && (
+        <h1 className={cl.error}> You have an error ${currency.errorMessage} </h1>
+      )}
       {currency.currencyList
         .filter((item) => item.txt === 'Долар США' || item.txt === 'Євро' || item.txt === 'Злотий')
         .map((currency) => (
