@@ -6,8 +6,6 @@ import { useEffect } from 'react';
 import cl from './Info.module.scss';
 import Loader from '../Loader/Loader';
 
-console.log('error', currency.errorMessage);
-
 const Info = () => {
   useEffect(() => {
     fetchCurrency1();
