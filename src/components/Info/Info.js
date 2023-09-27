@@ -1,14 +1,18 @@
 import { observer } from 'mobx-react-lite';
 import currency from '../../store/currency';
 import React from 'react';
+import { fetchCurrency1 } from '../../store/currnencyLoad';
+// import { fetchCurrency } from '../../store/currnencyLoad';
+
 import { useEffect } from 'react';
 import cl from './Info.module.scss';
 
 const Info = () => {
   useEffect(() => {
-    currency.fetchCurrency();
+    fetchCurrency1();
   }, []);
 
+  console.log(currency.isLoading);
   return (
     <div>
       {currency.currencyList
