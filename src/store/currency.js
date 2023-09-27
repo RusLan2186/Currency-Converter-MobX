@@ -2,7 +2,7 @@ import { observable } from 'mobx';
 
 const currency = observable({
   currencyList: [],
-  error: '',
+  error: 'hththth',
   isLoading: false,
   currencyFetching() {
     this.isLoading = true;
