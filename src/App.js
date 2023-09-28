@@ -2,6 +2,7 @@ import Info from './components/Info/Info';
 import './scss/App.scss';
 import Container from '@mui/material/Container';
 import Header from './components/Header/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Info />
         </Container>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
