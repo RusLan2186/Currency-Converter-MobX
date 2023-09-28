@@ -2,11 +2,13 @@ import { observer } from 'mobx-react-lite';
 import currency from '../../store/currency';
 import React from 'react';
 import { fetchCurrency } from '../../store/currnencyLoad';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import cl from './Info.module.scss';
 import Loader from '../Loader/Loader';
+import OtherCurrency from './OtherCurrency';
 
 const Info = () => {
+  const [otherCurrency, setOtherCurrency] = useState(false);
   const date = Date();
   useEffect(() => {
     fetchCurrency();
@@ -34,7 +36,14 @@ const Info = () => {
               <span className={cl.rate}> {currency.rate}</span>
             </div>
           ))}
+        <button
+          className={currency.errorMessage || currency.isLoading ? cl.button__disabled : cl.button}
+          onClick={() => setOtherCurrency(!otherCurrency)}
+        >
+          Show other currency
+        </button>
       </div>
+      {otherCurrency && <OtherCurrency currencyList={currency.currencyList} />}
     </div>
   );
 };
