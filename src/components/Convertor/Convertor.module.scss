@@ -5,6 +5,21 @@
    text-transform: uppercase;
    margin-bottom: 30px;
    border: 1px solid #000;
+   @media (max-width: 767.98px) {
+      font-size: 25px;
+      border: none;
+   }
+   @media (max-width: 680px) {
+      font-size: 20px;
+   }
+   @media (max-width: 600px) {
+      font-size: 30px;
+      justify-content: center;
+      margin-bottom: 20px;
+   }
+   @media (max-width: 390px) {
+      font-size: 22px;
+   }
 }
 .itemActive {
    cursor: pointer;
@@ -23,6 +38,18 @@
    &:hover {
       color: rgb(15, 196, 15);
       transition: 0.3s all ease 0s;
+   }
+   @media (max-width: 767.98px) {
+      border: 1px solid #000;
+   }
+   @media (max-width: 600px) {
+      padding: 10px 35px;
+   }
+   @media (max-width: 480px) {
+      padding: 10px 20px;
+   }
+   @media (max-width: 350px) {
+      padding: 10px 15px;
    }
 }
 .input {

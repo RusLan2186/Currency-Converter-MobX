@@ -43,6 +43,10 @@
    grid-template-columns: repeat(2, 50px);
    font-size: 20px;
    gap: 15px;
+   @media (max-width: 390px) {
+      font-size: 30px;
+      gap: 35px;
+   }
 }
 .rate {
    color: rgb(29, 170, 29);
