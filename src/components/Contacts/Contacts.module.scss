@@ -38,6 +38,13 @@
       height: 40px;
    }
 }
+.adress {
+   a {
+      @media (max-width: 767.98px) {
+         font-size: 20px;
+      }
+   }
+}
 .cart {
    position: relative;
    width: 100%;
