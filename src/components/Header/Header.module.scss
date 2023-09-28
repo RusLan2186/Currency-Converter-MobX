@@ -5,6 +5,9 @@
    align-items: center;
    position: fixed;
    width: 100%;
+   @media (max-width: 767.98px) {
+      min-height: 60px;
+   }
 }
 
 .container {
@@ -32,6 +35,7 @@
    }
    @media (max-width: 380px) {
       flex-direction: column;
+      gap: 5px;
    }
 }
 .link {
@@ -43,6 +47,9 @@
       font-weight: 700;
       transition: 0.3s all ease 0s;
    }
+   // @media (max-width: 767.98px) {
+   //    font-size: 18px;
+   // }
 }
 .active__link {
    font-weight: 700;
