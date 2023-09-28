@@ -4,10 +4,12 @@ import Container from '@mui/material/Container';
 
 function App() {
   return (
-    <div>
-      <Container>
-        <Info />
-      </Container>
+    <div className='wrapper'>
+      <main className='main'>
+        <Container sx={{ padding: 0 }}>
+          <Info />
+        </Container>
+      </main>
     </div>
   );
 }
