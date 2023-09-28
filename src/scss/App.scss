@@ -19,6 +19,21 @@ body {
 .main {
    min-height: calc(100vh - 80px);
 }
+.convert {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: white;
+   border-radius: 10px;
+   padding: 30px 0;
+   gap: 25px;
+
+   &:last-child {
+      @media (max-width: 500px) {
+         margin-bottom: 30px;
+      }
+   }
+}
 
 .footer {
    width: 100%;
