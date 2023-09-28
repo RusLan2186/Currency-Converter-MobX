@@ -56,4 +56,7 @@ body {
    display: flex;
    gap: 15px;
    justify-content: center;
+   @media (max-width: 460px) {
+      flex-wrap: wrap;
+   }
 }
