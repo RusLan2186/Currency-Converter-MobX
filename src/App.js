@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/Main';
+import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Container sx={{ padding: 0 }}>
           <Routes>
             <Route path='/home' element={<Main />}></Route>
+            <Route path='/contacts' element={<Contacts />}></Route>
           </Routes>
         </Container>
       </main>
