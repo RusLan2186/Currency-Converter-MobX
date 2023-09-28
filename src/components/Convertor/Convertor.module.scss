@@ -1,0 +1,41 @@
+.list {
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 30px;
+   border: 1px solid #000;
+}
+.itemActive {
+   cursor: pointer;
+   background-color: rgb(15, 196, 15);
+   padding: 10px 15px;
+   color: white;
+   border: 1px solid rgb(15, 196, 15);
+}
+.itemLi {
+   cursor: pointer;
+   padding: 10px 15px;
+   transition: 0.3s all ease 0s;
+   &:not(:last-child) {
+      border-right: 1px solid #000;
+   }
+   &:hover {
+      color: rgb(15, 196, 15);
+      transition: 0.3s all ease 0s;
+   }
+}
+.input {
+   border: 2px solid rgb(15, 196, 15);
+   border-radius: 16px;
+   background-color: transparent;
+   width: 100%;
+   padding: 10px;
+   font-size: 18px;
+   transition: 0.3s all ease 0s;
+
+   &:focus {
+      border: 4px solid rgb(15, 196, 15);
+      transition: 0.3s all ease 0s;
+   }
+}
