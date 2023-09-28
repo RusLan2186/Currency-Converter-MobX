@@ -1,10 +1,13 @@
 import Info from './components/Info/Info';
 import './scss/App.scss';
+import Container from '@mui/material/Container';
 
 function App() {
   return (
     <div>
-      <Info />
+      <Container>
+        <Info />
+      </Container>
     </div>
   );
 }
