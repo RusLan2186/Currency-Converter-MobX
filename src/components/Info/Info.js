@@ -43,7 +43,7 @@ const Info = () => {
           Show other currency
         </button>
       </div>
-      {otherCurrency && <OtherCurrency currencyList={currency.currencyList} />}
+      {otherCurrency && <OtherCurrency />}
     </div>
   );
 };

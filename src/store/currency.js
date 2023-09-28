@@ -4,6 +4,7 @@ const currency = observable({
   currencyList: [],
   errorMessage: '',
   isLoading: false,
+  searchResult: [],
   currencyFetching() {
     this.isLoading = true;
   },
@@ -15,18 +16,13 @@ const currency = observable({
   currencyFetchingError(e) {
     this.isLoading = false;
     this.errorMessage = e;
-    //  console.log(e);
   },
-  //   fetchCurrency() {
-  //     this.isLoading = true;
-  //     fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
-  //       .then((response) => response.json())
-  //       .then((json) => {
-  //         //   this.currencyList = [...this.currencyList, ...json];
-  //         this.currencyList = json;
-  //         this.isLoading = false;
-  //       });
-  //   },
+  searchCurrency(searchValue) {
+    this.searchResult = this.currencyList.filter(
+      (item) => item.cc.toLowerCase().includes(searchValue.toLowerCase()),
+      console.log(searchValue),
+    );
+  },
 });
 
 export default currency;

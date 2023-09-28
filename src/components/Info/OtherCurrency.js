@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import cl from './OtherCurrency.module.scss';
+import currency from '../../store/currency';
 
-const OtherCurrency = ({ currencyList }) => {
+const OtherCurrency = () => {
   const [searchValue, setSearchValue] = useState('');
 
-  const searchResult = currencyList.filter((item) =>
-    item.cc.toLowerCase().includes(searchValue.toLowerCase()),
-  );
+  currency.searchCurrency(searchValue);
 
   return (
     <div className={cl.wrapper}>
@@ -19,9 +18,9 @@ const OtherCurrency = ({ currencyList }) => {
           placeholder='Search....'
         />
       </div>
-      {searchResult.length > 0 ? (
+      {currency.searchResult.length > 0 ? (
         <div className={cl.container}>
-          {searchResult.map((currency) => (
+          {currency.searchResult.map((currency) => (
             <div className={cl.item} key={currency.cc}>
               <span className={cl.cc}> {currency.cc} </span>
               <span className={cl.rate}> {currency.rate}</span>
